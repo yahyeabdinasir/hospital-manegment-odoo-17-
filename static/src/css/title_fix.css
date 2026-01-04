@@ -1,0 +1,49 @@
+/* Increase underline width and thickness for oe_title */
+/*.o_form_view .oe_title input {*/
+/*    border-bottom-width: 30px; !* thickness *!*/
+/*    padding-bottom: 60px;*/
+
+/*}*/
+
+/*Optional: increase underline length */
+/*.o_form_viewx .oe_title {*/
+/*    width: 100%;*/
+/*    !*color-black;*!*/
+/*}*/
+
+/*.o_form_view .oe_title input {*/
+/*    width: 100%;*/
+/*}*/
+
+
+.o_form_view .o_group {
+    padding: 60px 60px;
+    /*background-color: red;*/
+    color: #f2e7c3;
+
+}
+
+/*.o_form_view .o_group  {*/
+/*    padding: 60px 60px;*/
+/*    background-color: red;*/
+/*    color: #f2e7c3;*/
+
+/*}*/
+
+/*.maxamed{*/
+/*    padding: 18px ;*/
+/*}*/
+
+/*.o_main_navbar {
+    background-color: #ffff !important;
+    color:#0000;
+}
+
+
+.btn-primary {
+    background-color: #ff5722 !important;
+}
+
+*/
+
+

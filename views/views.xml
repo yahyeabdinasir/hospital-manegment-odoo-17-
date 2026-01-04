@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+
+    <record id="id2" model="ir.ui.view">
+        <field name="name">hospital_patients.tree</field>
+        <field name="model">hospital.patients</field>
+        <field name="arch" type="xml">
+            <tree>
+                <field name="name"/>
+                <field name="age"/>
+                <field name="gender"/>
+                <field name="state"/>
+            </tree>
+        </field>
+    </record>
+    <record id="id1" model="ir.ui.view">
+        <field name="name">hospital_patients.form</field>
+        <field name="model">hospital.patients</field>
+        <field name="arch" type="xml">
+            <form>
+                <sheet>
+                    <group>
+                        <group>
+                            <field name="name"/>
+                            <field name="age"/>
+                        </group>
+
+
+                        <group>
+                            <field name="gender"/>
+                            <field name="state"/>
+
+                        </group>
+
+                    </group>
+                </sheet>
+
+            </form>
+        </field>
+    </record>
+
+    <record id="hospita_patietn_window" model="ir.actions.act_window">
+        <field name="name">Patietn</field>
+        <field name="res_model">hospital.patients</field>
+        <field name="view_mode">tree,form</field>
+
+    </record>
+    <menuitem
+            name="hospital patietn"
+            id="hospital_patietn_menu"
+            action="hospita_patietn_window"
+            parent="qaran_hospital"
+
+    />
+</odoo>

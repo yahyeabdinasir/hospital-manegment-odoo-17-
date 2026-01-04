@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+
+
+    <menuitem
+            name="qaran Hospital"
+            id="qaran_main_menu2"/>
+
+
+    <menuitem
+            name="Font Desk "
+            id="qaran_hospital"
+            parent="qaran_main_menu2"
+            sequence="0"
+    />
+
+
+</odoo>

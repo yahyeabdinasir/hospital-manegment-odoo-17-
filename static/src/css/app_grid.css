@@ -1,0 +1,58 @@
+/* App grid container */
+.o_apps {
+    gap: 24px !important;
+    padding: 32px !important;
+}
+
+/* Each app tile */
+.o_app {
+    border-radius: 16px !important;
+    background: #ffffff;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
+    transition: all 0.3s ease;
+}
+
+/* Hover effect */
+.o_app:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 14px 30px rgba(0, 0, 0, 0.15);
+}
+
+/* App icon background */
+.o_app_icon {
+    background: linear-gradient(135deg, #4f46e5, #22c55e);
+    border-radius: 14px;
+    padding: 18px;
+}
+
+/* App icon size */
+.o_app_icon img {
+    width: 52px;
+    height: 52px;
+}
+
+/* App name */
+.o_app_name {
+    font-weight: 600;
+    font-size: 15px;
+    margin-top: 12px;
+    color: #1f2937;
+}
+
+/* Center content */
+.o_app a {
+    text-align: center;
+}
+
+
+/*
+| Component           | CSS Class                                |
+| ------------------- | ---------------------------------------- |
+| Form fields         | `.o_form_field input`                    |
+| Title in form       | `.oe_title input`                        |
+| Buttons             | `.btn`, `.btn-primary`, `.btn-secondary` |
+| App dashboard tiles | `.o_app`, `.o_app_icon`, `.o_app_name`   |
+| Top navbar          | `.o_main_navbar`                         |
+| Labels              | `.o_form_label`                          |
+| Grid / Group        | `.o_group`                               |
+*/
