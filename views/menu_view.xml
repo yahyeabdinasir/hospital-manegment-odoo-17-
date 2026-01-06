@@ -14,5 +14,12 @@
             sequence="0"
     />
 
+    <menuitem
+            name="Appointment Desk "
+            id="hospital_appointment_menu"
+            parent="qaran_main_menu2"
+            sequence="0"
+    />
+
 
 </odoo>

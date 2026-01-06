@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+
+    <record id="patient_view_only_tree" model="ir.ui.view">
+        <field name="name">hospital_appointments.tree</field>
+        <field name="model">hospital.patients</field>
+        <field name="arch" type="xml">
+            <tree create="0" delete="0" edit="0">
+                <field name="name"/>
+                <field name="age"/>
+                <field name="gender"/>
+
+            </tree>
+        </field>
+    </record>
+    <record id="patient_view_only_form" model="ir.ui.view">
+        <field name="name">hospital_patients.form</field>
+        <field name="model">hospital.patients</field>
+        <field name="arch" type="xml">
+            <form create="0" delete="0" edit="0">
+                <sheet>
+                    <group>
+                        <group>
+                            <field name="name"/>
+                            <field name="age"/>
+                            <field name="date_of_birth"/>
+                        </group>
+
+
+                        <group>
+                            <field name="gender"/>
+
+                            <field name="booked_date"/>
+
+                        </group>
+
+                    </group>
+                </sheet>
+
+                <div class="oe_chatter">
+                    <field name="message_follower_ids"/>
+                    <field name="activity_ids"/>
+                    <field name="message_ids"/>
+
+                </div>
+
+            </form>
+        </field>
+    </record>
+
+    <record id="patient_view_only" model="ir.actions.act_window">
+        <field name="name">Patietn</field>
+        <field name="res_model">hospital.patients</field>
+        <field name="view_ids" eval="[Command.clear(),
+          (0, 0, {'view_mode': 'tree', 'view_id': ref('patient_view_only_tree')}),
+           (0, 0, {'view_mode': 'form', 'view_id': ref('patient_view_only_form')})]"/>
+        <field name="view_mode">tree,form</field>
+
+    </record>
+    <menuitem
+            name="patient view"
+            id="hospital_view_patient"
+            action="patient_view_only"
+            parent="qaran_hospital"
+            sequence="10"
+
+    />
+</odoo>

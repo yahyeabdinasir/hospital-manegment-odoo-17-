@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+
+    <!-- this is the calendar view of the record -->
+
+    <!--    <calendar>-->
+    <!--        -->
+    <!--    </calendar>-->
+    <!--    -->
+    <!--    -->
+    <!--    -->
+    <!-- this is the activity view of the record -->
+    <!--    <activity>-->
+    <!--        -->
+    <!--        -->
+    <!--        -->
+    <!--    </activity>-->
+
+
+    <!-- this is the tree view of the record -->
+    <record id="appointment_view_only_tree" model="ir.ui.view">
+        <field name="name">hospital.appoitnment.tree</field>
+        <field name="model">hospital.appoitnment</field>
+        <field name="arch" type="xml">
+            <tree>
+                <field name="number"/>
+                <field name="patient_id"/>
+
+                <field name="date_appoinment"/>
+
+                <field name="note"/>
+
+                <field name="date_of_birth"/>
+
+                <field name="state"/>
+
+
+            </tree>
+        </field>
+    </record>
+
+    <!--    and this is the form view of the record -->
+    <record id="appointment_view_only_form" model="ir.ui.view">
+        <field name="name">hospital.appoitnment.form</field>
+        <field name="model">hospital.appoitnment</field>
+        <field name="arch" type="xml">
+            <form>
+                <sheet>
+                    <group>
+                        <group>
+
+
+
+
+                                <h2  class="oe_title">
+                                    <field name="number"/>
+                                </h2>
+
+
+
+
+
+                            <field name="patient_id"/>
+
+                            <field name="date_appoinment"/>
+
+
+                        </group>
+                        <group>
+
+
+                            <field name="note"/>
+
+                            <field name="date_of_birth"/>
+
+                        </group>
+
+
+                    </group>
+                </sheet>
+
+                <div class="oe_chatter">
+                    <field name="message_follower_ids"/>
+                    <field name="activity_ids"/>
+                    <field name="message_ids"/>
+
+                </div>
+
+            </form>
+        </field>
+    </record>
+
+    <!--   and also this is the window action of the model-->
+    <record id="appointment_view_action" model="ir.actions.act_window">
+        <field name="name">hospital.appoitnment.form</field>
+        <field name="res_model">hospital.appoitnment</field>
+        <field name="view_mode">tree,form</field>
+    </record>
+
+    <!--    menu of the model -->
+    <menuitem
+            name="Appointment"
+            id="hospital_appointment_view"
+            action="appointment_view_action"
+
+            parent="hospital_appointment_menu"
+            sequence="0"
+
+
+    />
+
+</odoo>
+
+
